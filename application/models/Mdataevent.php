@@ -10,32 +10,64 @@ class Mdataevent extends CI_Model{
 
         function simpandata()
         {
-            $data = $_POST;
-            $id_user = $this->session->userdata('id');
-            $data['id_user'] = $id_user;
-            unset($data['notif']); //agar value tidak masuk ke database
+            // Konfigurasi Upload
+            $config['upload_path']   = './images/';
+            $config['allowed_types'] = 'jpeg|jpg|png';
+            $config['max_size']      = 10240;
+            $config['overwrite']     = TRUE;
 
-            $this->db->insert('event',$data);
+            $this->load->library('upload', $config);
 
-            $notif = $this->input->post('notif');
-            
-            //Jika notif di ceklis
-            if($notif == "on"){
-                $nama_event = $this->input->post('nama_event');
-                $penyelenggara = $this->input->post('penyelenggara');
-                $tingkat_event = $this->input->post('tingkat_event');
-                $tgl_event = $this->input->post('tgl_event');
-                $link = base_url('cdetail/detailEvent/'.$this->db->insert_id());
-    
-                $item = $this->db->query("SELECT * FROM user")->result();
-                foreach ($item as $data) {
-                    $this->memail->send($link, $data->email, $nama_event, $penyelenggara, $tingkat_event, $tgl_event);
+            if ($this->form_validation->run() == false) {
+                $tampildata['hasil']=$this->mdataevent->tampildata();
+                $data['kategoriData'] = $this->mdataevent->getKategoriData();
+                $data['konten']=$this->load->view('/admin/event',$data,TRUE);
+                $data['table']=$this->load->view('/admin/event_table',$tampildata,TRUE);
+                $this->load->view('/admin/vadmin',$data);
+            } else {
+                // File Upload
+                if ($this->upload->do_upload('gambar') && $this->upload->do_upload('thumbnail')) {
+                    $gambar = $this->upload->data('file_name');
+                    $thumbnail = $this->upload->data('file_name');
+                    $data    = $this->input->post();
+                    $id_user = $this->session->userdata('id');
+                    $data['id_user'] = $id_user;
+                    unset($data['notif']); // Exclude 'notif' from database
+                    $data['gambar'] = $gambar;
+                    $data['thumbnail'] = $thumbnail;
+
+                    $this->db->insert('event', $data);
+
+                    $notif = $this->input->post('notif');
+
+                    // Jika notif di ceklis
+                    if ($notif == "on") {
+                        $nama_event     = $this->input->post('nama_event');
+                        $penyelenggara  = $this->input->post('penyelenggara');
+                        $tingkat_event  = $this->input->post('tingkat_event');
+                        $tgl_event      = $this->input->post('tgl_event');
+                        $link           = base_url('cdetail/detailEvent/' . $this->db->insert_id());
+
+                        $item = $this->db->query("SELECT * FROM user")->result();
+                        foreach ($item as $user_data) {
+                            $this->memail->send($link, $user_data->email, $nama_event, $penyelenggara, $tingkat_event, $tgl_event);
+                        }
+                    }
+
+                    echo "<script>alert('Event berhasil disimpan');</script>";
+                    redirect('cevent/tampilevent', 'refresh');
+                } else {
+                    echo "<script>alert('File belum diisi/format file salah');</script>";
+
+                    $tampildata['hasil']=$this->mdataevent->tampildata();
+                    $data['kategoriData'] = $this->mdataevent->getKategoriData();
+                    $data['konten']=$this->load->view('/admin/event',$data,TRUE);
+                    $data['table']=$this->load->view('/admin/event_table',$tampildata,TRUE);
+                    $this->load->view('/admin/vadmin',$data);
                 }
             }
-        
-            echo "<script>alert('Event berhasil disimpan');</script>";
-            redirect('cevent/tampilevent','refresh');
         }
+
 
         function tampildata()
         {

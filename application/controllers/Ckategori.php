@@ -40,5 +40,12 @@
 			$this->mkategori->hapuskategori($id_kategori);	
 		}
 
+		function getKategori($id_kategori) {
+    		$this->mkategori->getKategori($id_kategori);
+		}
+
+		function updateKategori($id_kategori) {
+			$this->mkategori->updateKategori($id_kategori);
+		}
 	}
 ?>

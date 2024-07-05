@@ -22,17 +22,10 @@
 		
 		}
 
-		function updateEvent($id_event) {
-			$this->mdataevent->updateEvent($id_event);
-			
-		}
-
 		function simpandata(){
 
 			$this->form_validation->set_rules('nama_event','nama event','required|trim',
 			['required'=>'Nama event harus diisi harus diisi!']);
-			$this->form_validation->set_rules('gambar','Gambar','required|trim',['required'=>'gambar harus diisi!']);
-			$this->form_validation->set_rules('thumbnail','Thumbnail','required|trim',['required'=>'Thumbnail harus diisi!']);
 			$this->form_validation->set_rules('penyelenggara','Penyelenggara','required|trim',['required'=>'Penyelenggara harus diisi!']);
 			$this->form_validation->set_rules('tgl_awal','Tanggal awal','required|trim',['required'=>'Tanggal awal harus diisi!']);
 			$this->form_validation->set_rules('tgl_akhir','Tanggal akhir','required|trim',['required'=>'Tanggal akhir harus diisi!']);
@@ -63,6 +56,10 @@
 		//Mengambil mengarahkan value untuk Edit event ajax
 		function getEvent($id_event) {
     		$this->mdataevent->getEvent($id_event);
+		}
+
+		function updateEvent($id_event) {
+			$this->mdataevent->updateEvent($id_event);
 		}
 		
 		function cetakpdf($id_event)

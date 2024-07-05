@@ -39,10 +39,10 @@
 <div class="card mt-3">
     <div class="card-body">
     <h2 class="card-title d-flex justify-content-center mb-4">Tambah Kategori</h2>
-        <form class="forms-sample" method="POST" action="<?php echo base_url('ckategori/simpankategori'); ?>">
+        <form class="forms-sample" method="POST" id="form" action="<?php echo base_url('ckategori/simpankategori'); ?>">
             <div class="mb-3">
                 <label for="nama_kategori">Nama Kategori:</label>
-                <input type="text" class="form-control <?php echo form_error('nama_kategori') ? 'is-invalid' : ''; ?>" name="nama_kategori" placeholder="Nama Kategori">
+                <input type="text" class="form-control <?php echo form_error('nama_kategori') ? 'is-invalid' : ''; ?>" id="nama_kategori" name="nama_kategori" placeholder="Nama Kategori">
                 <div class="invalid-feedback">
                     <?php echo form_error('nama_kategori', '<small class="text-danger pl-3">','</small>'); ?>
                 </div>

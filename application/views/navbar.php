@@ -1,87 +1,76 @@
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<!-- Inisialisasi script -->
-<?php include 'script.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('application/views/css/navbar.css'); ?>">
+</head>
+<body>
+    <div class="header container-fluid">
+        <div class="logo">
+            <a href="<?= base_url('chalaman/index'); ?>">
+                <img id="main-logo" src="<?= base_url('images/logo_home.png'); ?>" data-alt-src="<?= base_url('images/logo.png'); ?>" class="d-inline-block align-top" alt="">
+            </a>
+        </div>
+        <div class="contact-info">
+            <div><i class="fa-solid fa-chalkboard-user custom1"></i> Work Hour: Mon-Fri, 7am-3pm</div>
+            <div><i class="fa-solid fa-square-phone custom1"></i> Phone: +62 (0361)701981</div>
+        </div>
+    </div>
+    <div class="header-under container-fluid">
+        <div class="nav-links">
+            <a href="<?= base_url('chalaman/index'); ?>">Home</a>
+            <a href="page2.html">Test Info</a>
+            <a href="page3.html">Institutions</a>
+            <a href="page4.html">Contact</a>
+        </div>
+        <a href="<?= base_url('chalaman/login'); ?>" class="login btn btn-primary">Login</a>
+    </div>
 
-<style>
-    .btn{
-        background-color: #004789;
-        color: #ffffff;
-    }
+    <!-- Scrolled Navbar -->
+    <div class="header-scrolled container-fluid">
+        <div class="logo">
+            <a href="<?= base_url('chalaman/index'); ?>">
+                <img id="main-logo" src="<?= base_url('images/logo_scroll.png'); ?>" data-alt-src="<?= base_url('images/logo.png'); ?>" class="d-inline-block align-top" alt="">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="<?= base_url('chalaman/index'); ?>">Home</a>
+            <a href="page2.html">Test Info</a>
+            <a href="page3.html">Institutions</a>
+            <a href="page4.html">Contact</a>
+        </div>
+        <a href="<?= base_url('chalaman/login'); ?>" class="login btn btn-primary">Login</a>
+    </div>
 
-    .search-result {
-        display: flex;
-        align-items: center;
-    }
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var mainLogo = document.getElementById('main-logo');
+            var headerOriginal = document.querySelector('.header');
+            var headerScrolled = document.querySelector('.header-scrolled');
+            var originalSrc = mainLogo.src;
+            var altSrc = mainLogo.getAttribute('data-alt-src');
 
-    .search-result-text {
-        margin-left: 10px;
-    }
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 44) { // Adjust the scroll threshold as needed
+                    mainLogo.src = altSrc;
+                    headerOriginal.style.opacity = '0'; /* Hide original header smoothly */
+                    headerScrolled.classList.add('show'); /* Show scrolled header smoothly */
+                } else {
+                    mainLogo.src = originalSrc;
+                    headerOriginal.style.opacity = '1'; /* Show original header smoothly */
+                    headerScrolled.classList.remove('show'); /* Hide scrolled header smoothly */
+                }
+            });
+        });
+    </script>
 
-    .search-result-img {
-        width: 60px;
-        height: 30px;
-        object-fit: cover;
-        border-radius: 5px;
-    }
-</style>
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <a class="navbar-brand" href="<?= base_url('chalaman/index');?>">
-        <img src="<?= base_url('images/pnb.png');?>" width="40" height="40" alt="">
-    </a>
-
-    <!-- Search -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <form class="form-inline my-2 my-lg-0" id="searchForm">
-            <div class="input-group mt">
-                <div class="input-group-prepend" style="border-right: none;">
-                    <div id="searchDropdown" style=" z-index: 1; display: none;"></div>
-                </div>
-                <input class="form-control" id="searchQuery" type="search" placeholder="Search Event" aria-label="Search">
-            </div>
-        </form>
-    </div>            
-
-    <!-- Navigation Item -->
-    <ul class="navbar-nav font-weight-bold">
-        <?php
-        // Cek jika login
-        if ($this->session->userdata('id')) {
-        ?>
-            <?php
-            if ($homepage) {
-                echo '<a class="nav-item mt-1" style="margin-right:20px; color:black;" href="' . base_url('chalaman/index') . '"><i class="fas fa-home"></i> Home</a>';
-            }
-            ?>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle custom-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-user"></i>
-                    <span class="ml-2"><?= $this->session->userdata('nama'); ?></span>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <?php
-                    if ($profile) {
-                        echo '<a class="dropdown-item" href="' . base_url('cprofile/tampilakun') . '">Profile</a>';
-                    }
-                    ?>
-                    <a class="dropdown-item text-danger" href="<?= base_url('chalaman/logout');?>">Logout</a>
-                </div>
-            </div>
-        <?php
-        } else {
-            // Tidak login
-            echo '<li class="nav-item">';
-            echo '<a class="nav-link" href="' .base_url('chalaman/daftar').'"><i class="fa-solid fa-user-plus"></i> Daftar</a>';
-            echo '</li>';
-            echo '<li class="nav-item">';
-            echo '<a class="nav-link" href="' .base_url('chalaman/login') . '"><i class="fa-solid fa-right-from-bracket"></i> Login</a>';
-            echo '</li>';
-        }
-        ?>
-    </ul>
-</nav>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

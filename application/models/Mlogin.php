@@ -4,12 +4,12 @@ class Mlogin extends CI_Model
     function proseslogin()
     {
         // Inisialisai hasil input
-        $username = $this->input->post('username', true);
+        $email = $this->input->post('email', true);
         $password = $this->input->post('password');
 
-        // Memilih user sesuai username dan password
-        $sql = "SELECT * FROM user WHERE username = ?";
-        $query = $this->db->query($sql, array($username));
+        // Memilih user sesuai email dan password
+        $sql = "SELECT * FROM user WHERE email = ?";
+        $query = $this->db->query($sql, array($email));
 
         // Cek apakah ada data di database
         if ($query->num_rows() > 0) {
@@ -18,10 +18,15 @@ class Mlogin extends CI_Model
             // Cek apakah password sesuai
             if (password_verify($password, $data->password)) {
                 $array = array(
-                    'id' => $data->id,
-                    'username' => $data->username,
+                    'id_user' => $data->id_user,
+                    'tipe_card' => $data->tipe_card,
+                    'id_card' => $data->id_card,
                     'email' => $data->email,
                     'nama' => $data->nama,
+                    'tgl_lahir' => $data->tgl_lahir,
+                    'foto' => $data->foto,
+                    'gender' => $data->gender,
+                    'status' => $data->status,
                     'role' => $data->role
                 );
 
@@ -31,10 +36,8 @@ class Mlogin extends CI_Model
                 // Redirect berdasarkan role
                 if ($data->role == 'admin') {
                     redirect('cdashboard/tampildata', 'refresh');
-                } elseif ($data->role == 'user') {
+                } else{
                     redirect('chalaman/index', 'refresh');
-                } else {
-                    // jika ada role lain
                 }
             } else {
                 $this->session->set_flashdata('pesan', 'Login gagal...');
@@ -43,7 +46,7 @@ class Mlogin extends CI_Model
             }
         } else {
             $this->session->set_flashdata('pesan', 'Login gagal...');
-            echo "<script>alert('Username tidak terdaftar');</script>";
+            echo "<script>alert('email tidak terdaftar');</script>";
             redirect('chalaman/login', 'refresh');
         }
     }
