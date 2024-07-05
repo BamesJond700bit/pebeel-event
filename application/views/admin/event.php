@@ -53,7 +53,7 @@
             <h2 class="card-title d-flex justify-content-center mb-4">Tambah Event</h2>
             <div class="row">
                 <div class="col-6">
-                    <form class="forms-sample" method="POST" id="form" action="<?php echo base_url('cevent/simpandata'); ?>">
+                    <form class="forms-sample" method="POST" enctype="multipart/form-data" id="form" action="<?php echo base_url('cevent/simpandata'); ?>">
                         <div class="mb-3">
                             <div class="form-label">
                                 <label for="exampleInputName1" class="form-label">Nama Event:</label>

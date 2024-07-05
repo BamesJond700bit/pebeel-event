@@ -9,10 +9,11 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap4.min.js"></script>
-    
+    <link rel="icon" href="<?= base_url('images/logo.png'); ?>" type="image/png">
+    <title>[Admin] PNB TOEIC Center</title>
     <style>
         body,html {
-            background-color: #004789;
+            background-color: #AACF7D;
             height: 100%;
             margin: 0;
             padding: 0;
@@ -57,7 +58,7 @@
         }
         
         .custom-btn {
-        background-color: #004789;
+        background-color: #355E3B;
         color: #fff;
         }
 
@@ -66,24 +67,28 @@
             background-color: #0066a2;
             color: #fff;
         }
+
+        .dropdown-menu-right.show {
+            right: 0;
+            left: auto;
+        }
     </style>
-    <title>Admin Dashboard</title>
 </head>
 
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand font-weight-bold" href="<?php echo base_url('cdashboard/tampildata'); ?>">
-            <img src="<?= base_url('images/pnb.png');?>" width="40" height="40" alt=""> PNBCC [<?= strtoupper($this->session->userdata('role')); ?>]
+            <img src="<?= base_url('images/logo_home.png');?>" width="270px" height="50px" alt=""> [<?= strtoupper($this->session->userdata('role')); ?>]
         </a>
         <ul class="navbar-nav font-weight-bold ml-auto">
             <li class="nav-item">
                 <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle custom-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-user"></i>
-                        <span class="ml-2"><?= $this->session->userdata('nama'); ?></span>
+                    <button class="btn btn-secondary dropdown-toggle custom-btn" style="background-color: #355E3B; border-radius:8px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="<?= base_url('img_profile/'.$this->session->userdata('foto')); ?>" alt="User Image" width="25px" height="25px" class="rounded-circle">
+                        <span class="ml-1"><?= $this->session->userdata('nama'); ?></span>
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="<?php echo base_url('cprofile/tampilakun'); ?>">Profile</a>
                         <a class="dropdown-item text-danger" href="<?= base_url('cadmin/logout');?>">Logout</a>
                     </div>

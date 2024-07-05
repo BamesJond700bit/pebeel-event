@@ -14,7 +14,7 @@ class Cdashboard extends CI_Controller
 
     public function tampildata()
     {
-        $data['eventCount'] = $this->mdashboard->getEventCounts();
+        $data['soalCount'] = $this->mdashboard->getSoalCounts();
         $data['userCount'] = $this->mdashboard->getUserCounts();
         $data['adminCount'] = $this->mdashboard->getAdminCounts();
         $data['konten'] = $this->load->view('/admin/dashboard', $data, TRUE);
