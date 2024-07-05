@@ -37,7 +37,7 @@ class Mlogin extends CI_Model
                 if ($data->role == 'admin') {
                     redirect('cdashboard/tampildata', 'refresh');
                 } else{
-                    redirect('chalaman/index', 'refresh');
+                    redirect('cindex/dashboardUser', 'refresh');
                 }
             } else {
                 $this->session->set_flashdata('pesan', 'Login gagal...');

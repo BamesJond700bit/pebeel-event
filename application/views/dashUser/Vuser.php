@@ -97,15 +97,25 @@
         <!-- Sidebar -->
         <div class="col-sm-2 bg-light" id="sidebar">
             <ul class="list-group">
-                <a href="" class="list-group-item list-group-item-action bg-light"><i class="fa-solid fa-gauge"></i> My Test</a>
+                <a href="" class="list-group-item list-group-item-action bg-light"><i class="fa-regular fa-newspaper"></i></> My Test</a>
                 <a href="" class="list-group-item list-group-item-action bg-light"><i class="fa-solid fa-user"></i> About Test</a>
                 <a href="<?php echo base_url('cimport/tampilimport')?>" class="list-group-item list-group-item-action bg-light"><i class="fa-solid fa-calendar-plus"></i> Institutions</a>
             </ul>
-            <ul class="list-group">
-                <a href="" class="list-group-item list-group-item-action bg-light"><i class="fa-solid fa-gauge"></i> My Account</a>
-            </ul>
         </div>
         <!-- Main Content -->
+        <div class="col-sm-10">
+            <div class="container mt-3">
+                <?php
+                if (empty($kontenuser)) {
+                    echo "";
+                } else {
+                    echo $kontenuser;
+                }
+                ?>
+
+            </div>
+        </div>
+    </div>
         
     </div>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

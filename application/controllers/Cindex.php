@@ -11,8 +11,11 @@
         }
 
         function dashboardUser(){
-            $this->load->view('dashUser/vuser');
+            $data['kontenuser'] = $this->load->view('/auth/lupa_pass',"", TRUE);
+			$this->load->view('dashUser/vuser', $data);
         }
+
+    
     }
 
 ?>
