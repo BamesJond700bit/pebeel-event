@@ -20,6 +20,10 @@
 			$this->load->view('contactus');
 		}
 
+		function test_info(){
+			$this->load->view('test_info');
+		}
+
 		public function login()
 		{
 			if ($this->session->userdata('role')!=null) {

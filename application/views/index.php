@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url('application/views/css/home.css'); ?>">
     <link rel="stylesheet" type="text/css" href="<?= base_url('application/views/css/navbar.css'); ?>">
     <link rel="icon" href="<?= base_url('images/logo.png'); ?>" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <title>PNB TOEIC Center</title>
 </head>
 <body>
@@ -13,33 +14,33 @@
     <?php include 'navbar.php'; ?>
 
     <!-- Hero Section -->
-    <div class="header-home">
-        <div class="text-content">
-            <h1>Empower Your Future with TOEIC  !</h1>
+    <div class="header-home" data-aos="fade-up">
+        <div class="text-content" data-aos="fade-up" data-aos-duration="1000">
+            <h1>Empower Your Future with TOEIC!</h1>
             <h5>Unlock Your Potential with TOEIC English Proficiency Computer Based Test, On-Site at Politeknik Negeri Bali.</h5>
             <p><i class="fa-solid fa-circle-check custom-icon"></i> TOEIC Official & Accurate Tests
                 <br><i class="fa-solid fa-circle-check custom-icon"></i> Comfortable Test Environment
                 <br><i class="fa-solid fa-circle-check custom-icon"></i> Flexible Scheduling</p>
-            <a href="#" class="test-button">TEST NOW!</a>
+            <a href="#" class="test-button" data-aos="zoom-in" data-aos-duration="1000">TEST NOW!</a>
         </div>
-        <div class="image-content">
+        <div class="image-content" data-aos="fade-up" data-aos-duration="1000">
             <img src="<?= base_url('images/model1.png'); ?>" alt="TOEIC Test">
         </div>
     </div>
 
     <!-- Features Section -->
-    <div class="features">
-        <div class="feature">
+    <div class="features" data-aos="fade-up" data-aos-duration="1200">
+        <div class="feature" data-aos="fade-up" data-aos-delay="200">
             <i class="fa-solid fa-earth-asia custom2"></i>
             <h1>Global Recognition</h1>
             <p>Recognized and valued by organizations, educational institutions, and professionals around the world.</p>
         </div>
-        <div class="feature">
+        <div class="feature" data-aos="fade-up" data-aos-delay="400">
             <i class="fa-solid fa-hand-holding-dollar custom2"></i>
-            <h1>Cheapest English Test   </h1>
+            <h1>Cheapest English Test</h1>
             <p>TOEIC ensures that more people can access a reputable English proficiency test without breaking the bank.</p>
         </div>
-        <div class="feature">
+        <div class="feature" data-aos="fade-up" data-aos-delay="600">
             <i class="fa-solid fa-graduation-cap custom2"></i>
             <h1>Academic Excellence</h1>
             <p>Access the best educational resources, become an Awardee and succeed in global academic environments.</p>
@@ -47,27 +48,27 @@
     </div>
 
     <!-- About Test Sections -->
-    <div class="test-section">
+    <div class="test-section" data-aos="fade-up" data-aos-duration="1200">
         <h1>About Test</h1>
         <div class="test-box-container">
-            <div class="test-box">
+            <div class="test-box" data-aos="fade-up" data-aos-delay="200">
                 <img src="<?= base_url('images/listening.jpg'); ?>" alt="Listening Test">
                 <h2>Listening Test</h2>
                 <p>The Listening Test is a component of English language proficiency assessment that evaluates your ability to understand spoken English in various contexts.</p>
             </div>
-            <div class="test-box">
+            <div class="test-box" data-aos="fade-up" data-aos-delay="400">
                 <img src="<?= base_url('images/reading.jpg'); ?>" alt="Reading Test">
                 <h2>Reading Test</h2>
                 <p>The Reading Test is part of the English language proficiency assessment that measures your ability to read and comprehend across a range of texts.</p>
             </div>
         </div>
-        <a href="#" class="learn-more-button">Learn More</a>
+        <a href="#" class="learn-more-button" data-aos="fade-up" data-aos-delay="600">Learn More</a>
     </div>
 
     <!-- Call to Action Section -->
-    <div class="cta-section">
+    <div class="cta-section" data-aos="fade-up" data-aos-duration="1200">
         <h1>Test Environment</h1>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-aos="fade-up" data-aos-duration="1000">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -84,28 +85,28 @@
                     <img class="d-block w-100" src="<?= base_url('images/c3.jpg'); ?>" alt="Third slide">
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" data-aos="fade-up" data-aos-duration="1000">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" data-aos="fade-up" data-aos-duration="1000">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <p>Ready to start your English proficiency journey? Let's go.. schedule your test!</p>
-        <a href="#" class="cta-button">TEST NOW!</a>
+        <p data-aos="fade-up" data-aos-delay="200">Ready to start your English proficiency journey? Let's go.. schedule your test!</p>
+        <a href="#" class="cta-button" data-aos="zoom-in" data-aos-delay="400">TEST NOW!</a>
     </div>
 
     <!-- FAQ Section -->
-    <div class="FAQ-section">
+    <div class="FAQ-section" data-aos="fade-up" data-aos-duration="1200">
         <h1>Frequently Asked Questions</h1>
         <div class="faq-container">
             <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Where this TOEIC test center located? 
+                            Where is this TOEIC test center located?
                             <i class="fa-solid fa-chevron-down icon-toggle"></i>
                         </button>
                     </h2>
@@ -115,7 +116,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item">
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
                     <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             How do I register for the TOEIC test?
@@ -128,7 +129,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item">
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="600">
                     <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             What should I do if I need to reschedule or cancel my TOEIC test?
@@ -147,6 +148,12 @@
 
     <!-- Footer -->
     <?php include 'footer.php'; ?>
-</body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200, // Duration of animation in milliseconds
+        });
+    </script>
 </body>
 </html>
