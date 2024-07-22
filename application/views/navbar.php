@@ -40,9 +40,9 @@
         </div>
         <div class="nav-links">
             <a href="<?= base_url('chalaman/index'); ?>">Home</a>
-            <a href="page2.html">Test Info</a>
+            <a href="<?= base_url('chalaman/test_info'); ?>">Test Info</a>
             <a href="page3.html">Institutions</a>
-            <a href="page4.html">Contact</a>
+            <a href="<?= base_url('chalaman/contactus');?>">Contact</a>
         </div>
         <a href="<?= base_url('chalaman/login'); ?>" class="login btn btn-primary">Login</a>
     </div>
