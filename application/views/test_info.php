@@ -108,7 +108,7 @@
                             <ul>
                                 <li>On the day of the test, you will be asked to sign an admission form which will be provided either in advance by e-mail during the registration process, or on the spot by test center staff.</li>
                                 <li>This admission form is required for taking the test and will be collected by test center staff at the end of the test session.</li>
-                                <li>Read the Examinee Handbook to ensure you are fully informed about the test procedure and the identity documents accepted.</li>
+                                <li>Read the <a href="https://etswebsiteprod.cdn.prismic.io/etswebsiteprod/ZnPW45m069VX153H_MAN037-ProctorExam_TOEIC-4-Skills_EXHB_IP_PP_CBT.pdf">Examinee Handbook</a> to ensure you are fully informed about the test procedure and the identity documents accepted.</li>
                             </ul>
                         </div>
                     </div>
@@ -152,7 +152,7 @@
                         <div class="accordion-body">
                             <h3>Preparation Resources</h3>
                             <ul>
-                                <li>An example of a TOEIC Listening and Reading test with the audio file for the Listening section.</li>
+                                <li><a href="https://etswebsiteprod.cdn.prismic.io/etswebsiteprod/29619a45-b3ed-4cdc-9fa4-8bd03a86b74f_toeic-listening-reading-sample-test.pdf">An example</a> of a TOEIC Listening and Reading test with the <a href="https://etswebsiteprod.cdn.prismic.io/etswebsiteprod/32325931-b50b-4959-9b79-fcd744eb2b89_Audio+Files+for+TOEIC+Sample+Test.zip">audio file</a> for the Listening section.</li>
                                 <li>TOEIC Official Learning and Preparation Course: a self-study program available online 24/7 with 90 hours of learning and test preparation material in 3 units.</li>
                                 <li>Coming soon: a free practice TOEIC Listening and Reading test to study for the test and obtain your CEFR level.</li>
                             </ul>
