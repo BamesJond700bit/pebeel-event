@@ -52,6 +52,15 @@ h1 {
     background-color: #f1f1f1;
 }
 
+.accordion-body h3 {
+    margin-top: 0;
+}
+
+.accordion-body ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
 .sidebar {
     padding: 20px;
     background-color: #e9f5ff;
