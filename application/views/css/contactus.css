@@ -1,0 +1,46 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #AACF7D;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #AACF7D;
+}
+
+.isi-konten {
+  
+    padding: 20px;
+    width: 60%;
+    box-sizing: border-box;
+    background-color: #AACF7D;
+}
+
+.image-section {
+
+    padding: 20px;
+    width: 30%;
+    box-sizing: border-box;
+    align-self: flex-end;
+}
+
+.contact-container h1 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-container p {
+    margin: 10px 0;
+}
+
+.isi-konten h2 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+}

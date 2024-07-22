@@ -16,6 +16,10 @@
 			$this->load->view('index');
 		}
 
+		function contactus(){
+			$this->load->view('contactus');
+		}
+
 		public function login()
 		{
 			if ($this->session->userdata('role')!=null) {

@@ -26,7 +26,7 @@
             <a href="<?= base_url('chalaman/index'); ?>">Home</a>
             <a href="page2.html">Test Info</a>
             <a href="page3.html">Institutions</a>
-            <a href="page4.html">Contact</a>
+            <a href="<?= base_url('chalaman/contactus'); ?>">Contact us</a>
         </div>
         <a href="<?= base_url('chalaman/login'); ?>" class="login btn btn-primary">Login</a>
     </div>
