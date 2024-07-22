@@ -11,10 +11,23 @@
         }
 
         function dashboardUser(){
-            $data['kontenuser'] = $this->load->view('/auth/lupa_pass',"", TRUE);
+			$this->load->view('dashUser/vuser');
+        }
+        
+        function aboutTest(){
+            $data['kontenuser'] = $this->load->view('/dashUser/aboutTest',"", TRUE);
 			$this->load->view('dashUser/vuser', $data);
         }
 
+        function institution(){
+            $data['kontenuser'] = $this->load->view('/dashUser/institution',"", TRUE);
+			$this->load->view('dashUser/vuser', $data);
+        }
+        function logout()
+		{
+			$this->session->sess_destroy();
+			redirect('chalaman/login','refresh');	
+		}
     
     }
 

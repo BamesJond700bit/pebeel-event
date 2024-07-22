@@ -18,7 +18,7 @@
             
             if ($query->num_rows() > 0) {
                 // Delete the OTP after successful verification
-                $this->deleteOtp($email);
+            
                 return true;
             } else {
                 return false;

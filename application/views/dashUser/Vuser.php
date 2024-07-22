@@ -73,7 +73,7 @@
 <body>
     <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand font-weight-bold" href="<?php echo base_url('cdashboard/tampildata'); ?>">
+        <a class="navbar-brand font-weight-bold" href="<?php echo base_url('cindex/dashboardUser'); ?>">
             <img src="<?= base_url('images/logo_home.png');?>" width="270px" height="50px" alt=""> 
         </a>
         <ul class="navbar-nav font-weight-bold ml-auto">
@@ -85,7 +85,7 @@
                     </button>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="<?php echo base_url('cprofile/tampilakun'); ?>">Profile</a>
-                        <a class="dropdown-item text-danger" href="<?= base_url('cadmin/logout');?>">Logout</a>
+                        <a class="dropdown-item text-danger" href="<?= base_url('cindex/logout');?>">Logout</a>
                     </div>
                 </div>
             </li>
@@ -98,8 +98,8 @@
         <div class="col-sm-2 bg-light" id="sidebar">
             <ul class="list-group">
                 <a href="" class="list-group-item list-group-item-action bg-light"><i class="fa-regular fa-newspaper"></i></> My Test</a>
-                <a href="" class="list-group-item list-group-item-action bg-light"><i class="fa-solid fa-user"></i> About Test</a>
-                <a href="<?php echo base_url('cimport/tampilimport')?>" class="list-group-item list-group-item-action bg-light"><i class="fa-solid fa-calendar-plus"></i> Institutions</a>
+                <a href="<?php echo base_url('cindex/aboutTest')?>" class="list-group-item list-group-item-action bg-light"><i class="fa-solid fa-user"></i> About Test</a>
+                <a href="<?php echo base_url('cindex/institution')?>" class="list-group-item list-group-item-action bg-light"><i class="fa-solid fa-calendar-plus"></i> Institutions</a>
             </ul>
         </div>
         <!-- Main Content -->
