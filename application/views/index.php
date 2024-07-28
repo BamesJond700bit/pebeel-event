@@ -112,7 +112,7 @@
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="accordion-body">
-                            <strong>di pnb jimbaran cuy</strong> deket bjir. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus convallis elementum. Morbi molestie neque libero, ac accumsan sem imperdiet vitae.
+                            <strong>We are located at</strong> Kampus Politeknik Negeri Bali, Bukit Jimbaran, Kuta Selatan, Badung
                         </div>
                     </div>
                 </div>

@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Institutions</title>
-    <link rel="stylesheet" type="text/css" href="<?= base_url('application/views/css/institution_user.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('application/views/css/navbar.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('application/views/css/institutions.css'); ?>">
+    <link rel="icon" href="<?= base_url('images/logo.png'); ?>" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <title>PNB TOEIC Center - Institutions</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Institutions</h1>
-        <p>TOEIC measures the English-Language readiness for workplace. TOEIC is standard measure of English skills since 35 years. More than 14000 organizations across world accepts TOEIC Score.</p>
-        <table class="institution-table">
+    <!-- Header -->
+    <?php include 'navbar.php'; ?>
+
+    <!-- Institutions Section -->
+    <div class="institutions-section" data-aos="fade-up" data-aos-duration="1200">
+        <h1>Institutions Accepting TOEIC Test</h1>
+        <table id="institutions-table">
             <thead>
                 <tr>
                     <th>University Name</th>
@@ -125,7 +131,19 @@
         <td>Chicago, IL</td>
     </tr>
 </tbody>
+
         </table>
     </div>
+
+    <!-- Footer -->
+    <?php include 'footer.php'; ?>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+        });
+    </script>
 </body>
 </html>

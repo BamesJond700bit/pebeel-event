@@ -16,13 +16,18 @@
 			$this->load->view('index');
 		}
 
+		function test_info(){
+			$this->load->view('test_info');
+		}
+
+		function instituions(){
+			$this->load->view('instituions');
+		}
+
 		function contactus(){
 			$this->load->view('contactus');
 		}
 
-		function test_info(){
-			$this->load->view('test_info');
-		}
 
 		public function login()
 		{

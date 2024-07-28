@@ -88,7 +88,7 @@
         <?php
             $homepage = true;
             $profile = false;
-            include __DIR__ . '/../navbar.php';
+            // include __DIR__ . '/../navbar.php';
         ?>
     <?php else : ?>
         <!-- Navbar -->
@@ -329,7 +329,7 @@
 
     <div class="back text-center" style="color:blue; margin-top: 20px;">
         <?php if ($this->session->userdata('role') != 'admin') : ?>
-            <p><a href="<?= base_url('chalaman/index'); ?>"><i class="fa-solid fa-circle-arrow-left"></i> Back to Admin Dashboard </a></p>
+            <p><a href="<?= base_url('cindex/dashboardUser'); ?>"><i class="fa-solid fa-circle-arrow-left"></i> Back to User Dashboard </a></p>
         <?php else : ?>
             <p><a href="<?= base_url('cdashboard/tampildata'); ?>"><i class="fa-solid fa-circle-arrow-left"></i> Back to Admin Dashboard </a></p>
         <?php endif; ?>

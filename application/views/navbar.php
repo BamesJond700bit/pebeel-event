@@ -25,7 +25,7 @@
         <div class="nav-links">
             <a href="<?= base_url('chalaman/index'); ?>">Home</a>
             <a href=<?= base_url('chalaman/test_info'); ?>>Test Info</a>
-            <a href="page3.html">Institutions</a>
+            <a href="<?= base_url('chalaman/instituions'); ?>">Institutions</a>
             <a href="<?= base_url('chalaman/contactus'); ?>">Contact us</a>
         </div>
         <a href="<?= base_url('chalaman/login'); ?>" class="login btn btn-primary">Login</a>
@@ -41,7 +41,7 @@
         <div class="nav-links">
             <a href="<?= base_url('chalaman/index'); ?>">Home</a>
             <a href="<?= base_url('chalaman/test_info'); ?>">Test Info</a>
-            <a href="page3.html">Institutions</a>
+            <a href="<?= base_url('chalaman/instituions'); ?>">Institutions</a>
             <a href="<?= base_url('chalaman/contactus');?>">Contact</a>
         </div>
         <a href="<?= base_url('chalaman/login'); ?>" class="login btn btn-primary">Login</a>
