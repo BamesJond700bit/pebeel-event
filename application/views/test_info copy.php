@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('application/views/css/navbar.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('application/views/css/test_info.css'); ?>">
     <link rel="icon" href="<?= base_url('images/logo.png'); ?>" type="image/png">
-    <link rel="stylesheet" type="text/css" href="<?= base_url('application/views/css/aboutTest.css'); ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <title>PNB TOEIC Center - Test Information</title>
 </head>
 <body>
-
+    <!-- Header -->
+    <?php include 'navbar.php'; ?>
 
     <!-- Test Information Section -->
     <div class="test-info-section" data-aos="fade-up" data-aos-duration="1200">
@@ -189,5 +192,15 @@
             <a href="https://etswebsiteprod.cdn.prismic.io/etswebsiteprod/4b110407-502b-46a9-bb2f-0fab65976fa9_ETS+Consent+Form.pdf" class="download-link">Consent form for test takers under 18 years of age</a>
         </div>
     </div>
+
+    <!-- Footer -->
+    <?php include 'footer.php'; ?>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+        });
+    </script>
 </body>
 </html>

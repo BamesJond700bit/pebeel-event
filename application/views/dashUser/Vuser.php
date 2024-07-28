@@ -97,9 +97,10 @@
         <!-- Sidebar -->
         <div class="col-sm-2 bg-light" id="sidebar">
             <ul class="list-group">
-                <a href="" class="list-group-item list-group-item-action bg-light"><i class="fa-regular fa-newspaper"></i></> My Test</a>
+                <a href="<?php echo base_url('cindex/mytest')?>" class="list-group-item list-group-item-action bg-light"><i class="fa-regular fa-newspaper"></i></> My Test</a>
                 <a href="<?php echo base_url('cindex/aboutTest')?>" class="list-group-item list-group-item-action bg-light"><i class="fa-solid fa-user"></i> About Test</a>
                 <a href="<?php echo base_url('cindex/institution')?>" class="list-group-item list-group-item-action bg-light"><i class="fa-solid fa-calendar-plus"></i> Institutions</a>
+                <a href="<?php echo base_url('cindex/score')?>" class="list-group-item list-group-item-action bg-light"><i class="fa-solid fa-calendar-plus"></i> Scores</a>
             </ul>
         </div>
         <!-- Main Content -->

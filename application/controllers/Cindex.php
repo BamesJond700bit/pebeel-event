@@ -11,7 +11,8 @@
         }
 
         function dashboardUser(){
-			$this->load->view('dashUser/vuser');
+            $data['kontenuser'] = $this->load->view('/dashUser/vmytest',"", TRUE);
+			$this->load->view('dashUser/vuser', $data);
         }
         
         function aboutTest(){
@@ -23,6 +24,17 @@
             $data['kontenuser'] = $this->load->view('/dashUser/institution',"", TRUE);
 			$this->load->view('dashUser/vuser', $data);
         }
+
+        function mytest(){
+            $data['kontenuser'] = $this->load->view('/dashUser/vmytest',"", TRUE);
+			$this->load->view('dashUser/vuser', $data);
+        }
+
+        function score(){
+            $data['kontenuser'] = $this->load->view('/dashUser/vtestinfo',"", TRUE);
+			$this->load->view('dashUser/vuser', $data);
+        }
+
         function logout()
 		{
 			$this->session->sess_destroy();

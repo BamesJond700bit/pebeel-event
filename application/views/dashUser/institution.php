@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Institutions</title>
-    <link rel="stylesheet" type="text/css" href="<?= base_url('application/views/css/institution_user.css'); ?>">
+    <title>Institutions</title>   <link rel="stylesheet" type="text/css" href="<?= base_url('application/views/css/institution_user.css'); ?>">
+ 
 </head>
 <body>
     <div class="container">
