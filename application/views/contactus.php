@@ -15,16 +15,24 @@
 <?php include 'navbar.php'; ?>
 
 <div class="contact-container">
-    <div class="isi-konten">
-        <h1>Contact Us</h1>
-        <p>We're here to help and answer any question you might have. We look forward to hearing from you.</p>
-        <p><i class="fas fa-phone"></i> +0 000 000</p>
-        <p><i class="fas fa-envelope"></i> adminpnbtc.com</p>
-        <h2><i class="fas fa-map-marker-alt"></i> Location</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15771.462281916085!2d115.162487!3d-8.798698!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd244c13ee9d753%3A0x6c05042449b50f81!2sPoliteknik%20Negeri%20Bali!5e0!3m2!1sen!2sid!4v1721578236161!5m2!1sen!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="contact-info">
+        <h1>Contact Information</h1>
+        <hr>
+        <p><i class="fas fa-map-marker-alt"></i> <strong>Politeknik Negeri Bali</strong></p>
+        <p>Kampus Politeknik Negeri Bali, Bukit Jimbaran, Kuta Selatan,<br> Badung - Bali 80361<br> PO BOX 1064 Tuban</p>
+        <p><i class="fas fa-phone"></i> +62 (0361)701981</p>
+        <p><i class="fas fa-envelope"></i> poltek@pnb.ac.id</p>
+        
+        <div class="social-icons">  
+            <a href="#"><i style="color: #0a0a0c;" class="fab fa-facebook fa-2x"></i></a>
+            <a href="#"><i style="color: #0a0a0c;" class="fab fa-youtube fa-2x"></i></a>
+            <a href="#"><i style="color: #0a0a0c;" class="fab fa-instagram fa-2x"></i></a>
+            <a href="#"><i style="color: #0a0a0c;" class="fab fa-linkedin fa-2x"></i></a>
+        </div>
     </div>
-    <div class="image-section">
-        <img src="<?= base_url('images/imcontact.png'); ?>" alt="contact us">
+    <div class="map-section">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15771.462281916085!2d115.162487!3d-8.798698!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd244c13ee9d753%3A0x6c05042449b50f81!2sPoliteknik%20Negeri%20Bali!5e0!3m2!1sen!2sid!4v1721578236161!5m2!1sen!2sid" width="800" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p><a href="https://www.google.com/maps/dir//Bali+State+Polytechnic,+Kampus+Bukit,+Jimbaran,+South+Kuta,+Badung+Regency,+Bali+80364/@-8.7988737,115.1593864,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2dd244c13ee9d753:0x6c05042449b50f81!2m2!1d115.162487!2d-8.798698?entry=ttu">Get direction</a></p>
     </div>
 </div>
 

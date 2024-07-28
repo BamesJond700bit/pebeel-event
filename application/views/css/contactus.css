@@ -1,6 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #AACF7D;
+    background-color: #AACF7D !important;
 }
 
 .contact-container {
@@ -8,39 +8,78 @@ body {
     justify-content: space-between;
     padding: 20px;
     background-color: #AACF7D;
+    
+    border-radius: 8px;
+    
+    margin: 20px auto;
+    width: 80%;
+    box-sizing: border-box;
 }
 
-.isi-konten {
-  
-    padding: 20px;
+.contact-info {
     width: 60%;
+    padding-right: 20px;
     box-sizing: border-box;
-    background-color: #AACF7D;
 }
 
-.image-section {
-
-    padding: 20px;
-    width: 30%;
-    box-sizing: border-box;
-    align-self: flex-end;
-}
-
-.contact-container h1 {
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.contact-container p {
-    margin: 10px 0;
-}
-
-.isi-konten h2 {
+.contact-info h1 {
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.image-section img {
-    width: 100%;
-    height: auto;
+.contact-info hr {
+    border: 1px solid #355E3B;
+    margin: 10px 0;
+    width: 50%;
 }
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.contact-info .social-icons {
+    margin-top: 20px;
+}
+
+.contact-info .social-icons a {
+    margin-right: 15px;
+    font-size: 24px;
+    color: #0a0a0c; /* Warna ikon */
+    text-decoration: none;
+}
+
+.contact-info .social-icons a i {
+    color: #0a0a0c;  /* Ikuti warna dari elemen a */
+}
+
+.contact-info .social-icons a:hover i {
+    color: #000; /* Warna ikon saat hover */
+}
+
+.map-section {
+    width: 40%;
+    text-align: center;
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 8px;
+}
+
+.map-section p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.map-section p a {
+    color: #4a56a6;
+    text-decoration: none;
+}
+
+.map-section p a:hover {
+    text-decoration: underline;
+}
+
